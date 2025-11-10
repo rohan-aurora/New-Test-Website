@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rohan | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Nunito+Sans:wght@400;600;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated particle canvas -->
+  <canvas id="particles"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo glow-outline" href="#hero">⚓ OnePort</a>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Ahoy! Welcome aboard</p>
+          <h1 class="handwritten name" data-animate="slide-up">Rohan Aurora</h1>
+          <h2 class="title" data-animate="slide-up" data-delay="100">
+            Front-End Developer <span class="divider">•</span> Designer <span class="divider">•</span> Anime Enthusiast
+          </h2>
+          <p class="subtitle" data-animate="fade-in" data-delay="200">
+            I craft bold, performant web experiences with a spirit of adventure —
+            deep blues, radiant golds, and just the right amount of anime glow.
+          </p>
+          <div class="hero-actions" data-animate="fade-in" data-delay="300">
+            <a href="#projects" class="btn btn-gold">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Hire Me</a>
+          </div>
+        </div>
+
+        <div class="hero-art" data-animate="float-in">
+          <div class="coin-ring"></div>
+          <div class="shipwheel"></div>
+          <div class="sparkles" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-head">
+          <h3 class="section-title" data-animate="slide-up">Featured Projects</h3>
+          <p class="section-sub" data-animate="fade-in" data-delay="100">
+            Bright, youthful cards with playful energy — click to view.
+          </p>
+        </div>
+
+        <div id="projectGrid" class="project-grid" data-animate="stagger-grid"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-head">
+          <h3 class="section-title" data-animate="slide-up">Skills</h3>
+          <p class="section-sub" data-animate="fade-in" data-delay="100">
+            Hover for that anime-glow. Toggle between Technical and Creative.
+          </p>
+        </div>
+
+        <div class="skills-toggle" role="tablist" aria-label="Skill categories">
+          <button class="toggle-btn active" role="tab" aria-selected="true" data-target="tech">Technical</button>
+          <button class="toggle-btn" role="tab" aria-selected="false" data-target="creative">Creative</button>
+        </div>
+
+        <div class="skills-wrap">
+          <div id="tech" class="skills-grid active" role="tabpanel" aria-labelledby="Technical">
+            <!-- Filled by JS -->
+          </div>
+          <div id="creative" class="skills-grid" role="tabpanel" aria-labelledby="Creative">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="about-card glow-outline" data-animate="slide-up">
+          <h4>About Me</h4>
+          <p>
+            I’m a developer who blends <strong>clean code</strong> with <strong>cinematic visuals</strong>.
+            My stack is HTML/CSS/JS with sprinkles of Python and Firebase. I love micro-interactions,
+            performance, and building UIs that feel alive — like a scene straight out of an anime opening.
+          </p>
+          <ul class="about-list">
+            <li>Accessibility-minded & semantic HTML</li>
+            <li>Responsive layouts & fluid motion</li>
+            <li>Firebase auth / RTDB basics</li>
+            <li>Design systems & component thinking</li>
+          </ul>
+        </div>
+
+        <div class="about-stats" data-animate="float-in">
+          <div class="stat">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">10k+</span>
+            <span class="stat-label">Lines of CSS</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Anime Energy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="sea-wave"></div>
+      <div class="container">
+        <div class="section-head">
+          <h3 class="section-title" data-animate="slide-up">Contact</h3>
+          <p class="section-sub" data-animate="fade-in" data-delay="100">
+            Drop a message — the sea breeze carries it my way.
+          </p>
+        </div>
+
+        <form id="contactForm" class="contact-form glow-outline" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn-send">
+            <span class="btn-glow"></span>
+            Send Message
+          </button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Rohan Aurora — Made with ⚓ & anime glow.</p>
+      <div class="socials">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
